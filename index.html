@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -13,31 +13,49 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/png" href="/ffavicon\avicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="favicon\favicon.svg" />
-  <link rel="shortcut icon" href="favicon\favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon\apple-touch-icon.png" />
-  <link rel="manifest" href="favicon\site.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="favicon\favicon.svg" />
+    <link rel="shortcut icon" href="favicon\favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon\apple-touch-icon.png" />
+    <link rel="manifest" href="favicon\site.webmanifest" />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <title>Pyramid</title>
   </head>
   <body>
     <header class="header">
       <nav>
-        <div class="nav__logo"><a href="#">Pyramid</a></div>
+<div class="nav__logo">
+    <a href="#" class="logo-link">
+        <span class="logo-pyramid">Pyramid</span> 
+        <span class="logo-collection">Tie Collection</span>
+    </a>
+</div>
         <ul class="nav__links" id="nav-links">
           <li class="link"><a href="#home">Home</a></li>
           <li class="link"><a href="#choose">About</a></li>
           <li class="link"><a href="#craft">Products</a></li>
           <li class="link"><a href="#modern">Contact</a></li>
-          <!-- <li class="link"><a href="#testimonial">Testimonials</a></li> -->
-        </ul>
+          </ul>
         <div class="nav__menu__btn" id="menu-btn">
           <span><i class="ri-menu-line"></i></span>
+        </div>
+        <div class="nav__product__btn" id="product-btn">
+            <span><i class="ri-grid-fill"></i></span>
         </div>
         <div class="nav__actions">
           <span><a href="https://www.facebook.com/share/1BZMhnioeu/ " target="_blank"><i class="ri-facebook-fill"></i></a></span>
           <span><a href="https://www.instagram.com/p/DIt2YG0zwSl/" target="_blank"><i class="ri-instagram-fill"></i></a></span>
         </div>
       </nav>
+
+      <ul class="product__links" id="product-links">
+          <li class="link"><a href="#craft">Ties</a></li>
+          <li class="link"><a href="#craft">Bow Ties</a></li>
+          <li class="link"><a href="#craft">Tie Bars</a></li>
+          <li class="link"><a href="#craft">Cufflinks</a></li>
+          <li class="link"><a href="#craft">Pocket Squares</a></li>
+      </ul>
+
       <div class="section__container header__container" id="home">
         <h1>Make Your Look More Refined & Modern
 
@@ -133,7 +151,7 @@
           <img src="assets/tieall.png" alt="Luxury Tie" />
           <p>Elegance Redefined</p>
           <h4>Premium Tie</h4>
-        </div>      
+        </div>         
         <a href="#"><i class="ri-add-line"></i></a>
       </div>
       <div class="craft__image">
@@ -181,7 +199,7 @@
         </div>
     <br>
     <br>
-  
+ 
         <form class="contact__form" id="contactForm">
             <div class="input__group">
                 <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -206,98 +224,6 @@
         </div>
     </div>
     </section>
-<!-- 
-    <section class="section__container testimonial__container" id="testimonial">
-      <h2 class="section__header">Testimonials</h2>
-      Slider main container
-      <div class="swiper">
-        Additional required wrapper
-        <div class="swiper-wrapper">
-          Slides
-          <div class="swiper-slide">
-            <div class="testimonial__card">
-              <p>
-                Working with them was an absolute pleasure! Their modern design
-                expertise completely transformed my home into a contemporary
-                haven. I now have a space that not only looks stunning but also
-                feels incredibly comfortable. I couldn't be happier with the
-                results
-              </p>
-              <img src="assets/profile-pic-1.jpg" alt="testimonial" />
-              <h4>Sam William</h4>
-              <h5>CEO, Co-Founder</h5>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="testimonial__card">
-              <p>
-                I hired them to revamp our office space, and the results
-                exceeded my expectations. Their innovative design concepts
-                breathed new life into our workplace, making it both functional
-                and stylish. The team's attention to detail and commitment to
-                quality are truly commendable.
-              </p>
-              <img src="assets/profile-pic-2.jpg" alt="testimonial" />
-              <h4>Michelle Anna</h4>
-              <h5>Office Renovator</h5>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="testimonial__card">
-              <p>
-                I had a vision of a minimalist-inspired home, and they brought
-                it to life flawlessly. Their designers understood my aesthetic
-                and incorporated sleek, clean lines, and a neutral color palette
-                to create a serene oasis. I'm in love with my modern,
-                clutter-free space!
-              </p>
-              <img src="assets/profile-pic-3.jpg" alt="testimonial" />
-              <h4>John D'souza</h4>
-              <h5>Banker</h5>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="testimonial__card">
-              <p>
-                What sets them apart is their professionalism and efficiency.
-                They made the entire design process hassle-free, from the
-                initial consultation to the final installation. Their team
-                handled everything, leaving me with a beautifully designed
-                modern interior
-              </p>
-              <img src="assets/profile-pic-4.jpg" alt="testimonial" />
-              <h4>David Laid</h4>
-              <h5>Businessman</h5>
-            </div>
-          </div>
-        </div>
-        If we need pagination
-        <div class="swiper-pagination"></div>
-      </div>
-    </section> -->
-
-    <!-- <section class="section__container blog_container" id="blog">
-      <h2 class="section__header">Recent Blog</h2>
-      <div class="blog__grid">
-        <div class="blog__card">
-          <img src="assets/blog-1.jpg" alt="blog" />
-          <h4>Mastering Modern Minimalism</h4>
-          <p><span>by</span> DesignSavvySoul <span>on</span> Apr 18th, 2022</p>
-        </div>
-        <div class="blog__card">
-          <img src="assets/blog-2.jpg" alt="blog" />
-          <h4>The Fusion of Tech and Design</h4>
-          <p>
-            <span>by</span> ChicNestInteriors <span>on</span> Nov 10th, 2022
-          </p>
-        </div>
-        <div class="blog__card">
-          <img src="assets/blog-3.jpg" alt="blog" />
-          <h4>Eco-Friendly Modern Interiors</h4>
-          <p><span>by</span> HomeStyleHarmony <span>on</span> Feb 25th, 2023</p>
-        </div>
-      </div>
-    </section> -->
 
     <section class="social__section">
       <h2>Follow us on Social Media</h2>
@@ -308,9 +234,9 @@
           <a href="https://twitter.com/yourprofile" target="_blank"><i class="ri-twitter-fill"></i></a>
           <a href="https://www.linkedin.com/in/yourprofile" target="_blank"><i class="ri-linkedin-fill"></i></a>
       </div>
-  
+ 
       <blockquote class="social__quote">
-          "A well-tied tie is the first serious step in life."  
+          "A well-tied tie is the first serious step in life."    
           <span>- Oscar Wilde</span>
       </blockquote>
   </section>

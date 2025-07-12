@@ -127,10 +127,12 @@ nav {
   width: 100%;
 }
 
-.nav__menu__btn {
-  display: none;
+.nav__menu__btn,
+.nav__product__btn { /* Added .nav__product__btn here */
+  display: none; /* Hide by default, show on mobile */
   font-size: 1.5rem;
   color: var(--white);
+  cursor: pointer;
 }
 
 .nav__actions {
@@ -614,6 +616,52 @@ nav {
   white-space: nowrap;
 }
 
+/* New CSS for the product links panel */
+.product__links {
+  list-style: none;
+  position: fixed;
+  top: 68px; /* Below the fixed header */
+  right: 0;
+  width: 250px; /* Adjust as needed */
+  height: calc(100% - 68px); /* Full height below header */
+  background-color: rgba(0, 0, 0, 0.9); /* Same as main nav */
+  flex-direction: column;
+  padding: 2rem;
+  transform: translateX(100%); /* Start off-screen to the right */
+  transition: transform 0.5s ease-in-out;
+  z-index: 98; /* Below main nav but above content */
+  display: flex; /* Ensure it's a flex container for column layout */
+  gap: 1.5rem; /* Space out the links */
+  align-items: flex-start; /* Align links to the left */
+}
+
+.product__links.open {
+  transform: translateX(0); /* Slide into view */
+}
+
+.product__links .link a {
+  color: var(--white);
+  font-size: 1.2rem;
+  position: relative;
+  transition: 0.3s;
+}
+
+.product__links .link a::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0; /* Changed to left for product links */
+  height: 2px;
+  width: 0;
+  background-color: var(--white);
+  transition: 0.3s;
+}
+
+.product__links .link a:hover::after {
+  width: 100%;
+}
+
+
 @media (width < 1200px) {
   .offer__container {
     row-gap: 1rem;
@@ -690,6 +738,15 @@ nav {
     padding: 1rem;
     background-color: #000000;
     z-index: 99;
+    /* Updated: Use flexbox properties to distribute space */
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly */
+    align-items: center;
+    gap: 1rem; /* Added gap between nav items */
+  }
+
+  .nav__logo {
+    flex-grow: 1; /* Allow logo to take available space */
   }
 
   .nav__links {
@@ -718,8 +775,25 @@ nav {
   }
 
   .nav__menu__btn {
-    display: block;
+    display: block; /* Show the main menu button */
+    order: 2; /* Adjust order to be in the middle */
   }
+
+  .nav__product__btn { /* Show the new product button on mobile */
+      display: block;
+      order: 3; /* Place it on the right side */
+  }
+
+  /* Adjust nav actions to sit between the two buttons or reorder as desired */
+  .nav__actions {
+      order: 1; /* Place social actions on the left */
+      flex: 0; /* Remove flex grow */
+      gap: 0.5rem; /* Reduced gap for actions on mobile */
+  }
+  .nav__actions span {
+      font-size: 1.2rem; /* Keep social icons size consistent */
+  }
+
 
   .header__container h1 {
     margin-top: 4rem;
@@ -880,4 +954,59 @@ nav {
   font-size: 1rem;
   font-weight: bold;
   margin-top: 5px;
+}
+/* Add this to your styles.css file */
+
+.nav__logo .logo-link {
+    display: flex;
+    align-items: baseline; /* Aligns text based on baseline */
+    gap: 0.2rem; /* Small space between words */
+    text-decoration: none; /* Remove underline */
+    color: var(--white); /* Ensure color is white, or whatever your nav text color is */
+    line-height: 1; /* Helps with alignment of different sized texts */
+}
+
+.nav__logo .logo-pyramid {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5em; /* Start a bit larger, adjust as needed */
+    font-weight: normal; /* Script fonts usually don't need bolding */
+    /* If the "P" is cutting off at the top, you might need a tiny bit of padding-top here
+       or adjust line-height of the parent .logo-link */
+}
+
+.nav__logo .logo-collection {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.7em; /* Proportionally smaller */
+    font-weight: 500; /* Medium weight for readability */
+    white-space: nowrap; /* Keep on one line */
+    text-transform: uppercase; /* For stylistic contrast */
+    letter-spacing: 0.05em; /* Add a little spacing for readability */
+    /* You can try a subtle text-shadow here if needed for contrast, but let's test without first */
+    /* text-shadow: 1px 1px 2px rgba(0,0,0,0.5); */
+}
+
+
+/* Adjust existing .nav__logo a rule if it conflicts */
+/* Your existing .nav__logo a rule that sets font-size: 1.5rem and font-weight: 600
+   might be overriding these new rules. Ensure these new rules are declared *after*
+   any general .nav__logo a rules, or are more specific. */
+/* You might want to remove or simplify your existing .nav__logo a rule if it's
+   causing issues, and let these new specific classes handle it. */
+.nav__logo a {
+    /* Remove or comment out conflicting styles if they are overriding the new ones */
+    /* font-size: 1.5rem; */
+    /* font-weight: 600; */
+    /* font-family: var(--header-font); */
+    /* Just keep color for now, or let .logo-link handle it */
+    color: var(--white);
+}
+
+/* If the logo is still too big or small, adjust these font-size values: */
+@media (max-width: 600px) {
+    .nav__logo .logo-pyramid {
+        font-size: 2em; /* Smaller on mobile */
+    }
+    .nav__logo .logo-collection {
+        font-size: 0.6em; /* Smaller on mobile */
+    }
 }

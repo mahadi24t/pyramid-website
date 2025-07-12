@@ -2,16 +2,34 @@ const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
 
+const productBtn = document.getElementById("product-btn");
+const productLinks = document.getElementById("product-links");
+
 menuBtn.addEventListener("click", (e) => {
   navLinks.classList.toggle("open");
+  // Close product panel if main menu is opened
+  productLinks.classList.remove("open");
 
   const isOpen = navLinks.classList.contains("open");
   menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
 });
 
+productBtn.addEventListener("click", (e) => {
+  productLinks.classList.toggle("open");
+  // Close main menu if product panel is opened
+  navLinks.classList.remove("open");
+  menuBtnIcon.setAttribute("class", "ri-menu-line"); // Reset main menu icon
+});
+
 navLinks.addEventListener("click", (e) => {
   navLinks.classList.remove("open");
   menuBtnIcon.setAttribute("class", "ri-menu-line");
+});
+
+productLinks.addEventListener("click", (e) => {
+    if (e.target.tagName === 'A') { // Only close if an anchor tag is clicked
+        productLinks.classList.remove("open");
+    }
 });
 
 const scrollRevealOption = {
