@@ -199,71 +199,71 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem; /* Slightly increased gap for better flow */
-    max-width: 500px; /* Increased max-width for longer taglines */
+    gap: 0.5rem;
+    max-width: 500px;
     margin: 0 auto;
-    padding: 2.5rem 2rem; /* More generous padding */
-    background-color: rgba(0, 0, 0, 0.55); /* Slightly darker, more prominent background */
-    border-radius: 12px; /* Slightly more rounded corners */
-    backdrop-filter: blur(8px); /* Increased blur for a softer effect */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); /* Stronger, more diffused shadow */
-    border: 1px solid rgba(255, 255, 255, 0.15); /* Subtle white border for definition */
+    padding: 2.5rem 2rem;
+    background-color: rgba(0, 0, 0, 0.55);
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .business-logo {
-    max-width: 220px; /* Slightly larger logo */
+    max-width: 220px;
     height: auto;
-    border-radius: 8px; /* Slightly more rounded corners for the logo */
-    margin-bottom: 1.5rem; /* Increased space below the logo */
-    transition: transform 0.3s ease-out; /* Added transition for hover */
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease-out;
 }
 
 .business-logo:hover {
-    transform: scale(1.03); /* Subtle grow effect on hover */
+    transform: scale(1.03);
 }
 
 /* New styles for the two lines */
 .logo-subtitle {
     font-family: var(--header-font);
-    font-size: 1.45rem; /* Larger font size */
-    font-weight: 600; /* More prominent weight */
+    font-size: 1.45rem;
+    font-weight: 600;
     color: var(--white);
-    line-height: 1.4; /* Improved line height */
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.6); /* Stronger, clearer text shadow */
-    margin-bottom: 0.5rem; /* Space between subtitle and established line */
+    line-height: 1.4;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+    margin-bottom: 0.25rem;
     text-align: center;
 }
 
 .logo-established {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.1rem; /* Larger font size */
+    font-size: 1.1rem;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.95); /* Brighter for better contrast */
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Clearer text shadow */
-    margin-bottom: 2rem; /* Increased space before the button */
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    margin-bottom: 2rem;
     text-align: center;
 }
 
 .inquire-btn {
-    padding: 1rem 3rem; /* More generous padding */
-    font-size: 1.15rem; /* Slightly larger font */
-    background-color: var(--accent-color); /* Uses the accent color */
-    border-radius: 8px; /* Slightly rounded corners */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Button shadow */
+    padding: 1rem 3rem;
+    font-size: 1.15rem;
+    background-color: var(--accent-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .inquire-btn:hover {
-    background-color: darken(var(--accent-color), 10%); /* Darken on hover */
-    transform: translateY(-2px); /* Slight lift effect */
+    background-color: #8c6237; /* Example darker shade for hover */
+    transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 .social-chat-options {
     display: flex;
-    gap: 1.8rem; /* Increased space between social icons */
-    margin-top: 1.5rem; /* More space from the button */
-    transition: all 0.4s ease-in-out; /* Slower, smoother transition */
+    gap: 1.8rem;
+    margin-top: 1.5rem;
+    transition: all 0.4s ease-in-out;
     opacity: 0;
     max-height: 0;
     overflow: hidden;
@@ -278,13 +278,13 @@ nav {
 
 .social-chat-options a {
     color: var(--white);
-    font-size: 2.8rem; /* Larger icons for prominence */
+    font-size: 2.8rem;
     transition: transform 0.2s ease-in-out, color 0.3s ease;
 }
 
 .social-chat-options a:hover {
-    transform: scale(1.15); /* More pronounced grow on hover */
-    color: var(--accent-color); /* Change color on hover for visual feedback */
+    transform: scale(1.15);
+    color: var(--accent-color);
 }
 
 /* Styling for other slide content (if you add text/buttons to other slides) */
@@ -319,6 +319,183 @@ nav {
     background: var(--white);
     opacity: 1;
     transform: scale(1.2);
+}
+
+/* --- NEW PRODUCTS PAGE STYLES --- */
+.header__products-page {
+    /* Specific height for the static header on products page */
+    min-height: 300px; /* Adjust as needed */
+    padding-top: 68px; /* Offset for fixed nav */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.header__products-page .header__content__new {
+    /* Make this content block less prominent than the main page slider content */
+    background-color: rgba(0, 0, 0, 0.3); /* Lighter background */
+    backdrop-filter: blur(4px); /* Less blur */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Lighter shadow */
+    padding: 1.5rem; /* Less padding */
+    max-width: 600px; /* Wider for text */
+    gap: 0.75rem; /* More space between title/subtitle */
+}
+
+.header__products-page .header-slide-title {
+    font-size: 2.2rem; /* Slightly smaller for static header */
+    margin-bottom: 0.5rem;
+}
+
+.header__products-page .header-slide-text {
+    font-size: 1rem;
+    margin-bottom: 0; /* No button here, so no bottom margin needed */
+}
+
+.products__page {
+    text-align: center;
+    padding-top: 5rem;
+}
+
+/* Styles for the main container that holds all categories */
+#products-categories-container {
+    margin-top: 3rem; /* Space below the main products header */
+}
+
+/* Styles for each individual category section */
+.category-section {
+    margin-bottom: 4rem; /* Space between different categories */
+}
+
+.category-heading {
+    font-family: var(--header-font);
+    font-size: 2.2rem; /* Prominent size for category titles */
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 2.5rem; /* Space between heading and products grid */
+    text-align: center;
+    position: relative;
+    padding-bottom: 0.5rem; /* Space for underline effect */
+}
+
+.category-heading::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 80px; /* Short underline */
+    height: 3px;
+    background-color: var(--accent-color); /* Accent color for underline */
+    border-radius: 5px;
+}
+
+
+.products__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.product-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.product-card h3 {
+    font-family: var(--header-font);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.product-card .product-price {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.product-card .product-link-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    width: 100%;
+    margin-top: auto;
+}
+
+.product-card .product-link-btn:hover {
+    background-color: var(--text-dark);
+}
+
+
+/* Responsive adjustments for product grid */
+@media (max-width: 768px) {
+    .products__grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+    .category-heading {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .products__grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .product-card {
+        padding: 1rem;
+    }
+    .product-card img {
+        height: 180px;
+    }
+    .header__products-page .header-slide-title {
+        font-size: 1.8rem;
+    }
+    .header__products-page .header-slide-text {
+        font-size: 0.9rem;
+    }
+    .category-heading {
+        font-size: 1.6rem;
+    }
 }
 
 

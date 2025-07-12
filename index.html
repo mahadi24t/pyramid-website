@@ -7,6 +7,7 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <!-- Ensure Swiper CSS is linked -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
@@ -17,8 +18,10 @@
     <link rel="shortcut icon" href="favicon\favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="favicon\apple-touch-icon.png" />
     <link rel="manifest" href="favicon\site.webmanifest" />
+    <!-- Ensure these Google Font links are present and correct -->
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <!----------------------------------------------------------->
     <title>Pyramid</title>
   </head>
   <body>
@@ -33,12 +36,14 @@
         <ul class="nav__links" id="nav-links">
           <li class="link"><a href="#home">Home</a></li>
           <li class="link"><a href="#choose">About</a></li>
-          <li class="link"><a href="#craft">Products</a></li>
+          <li class="link"><a href="products.html">Products</a></li> <!-- LINK UPDATED -->
           <li class="link"><a href="#modern">Contact</a></li>
-          </ul>
+          <!-- <li class="link"><a href="#testimonial">Testimonials</a></li> -->
+        </ul>
         <div class="nav__menu__btn" id="menu-btn">
           <span><i class="ri-menu-line"></i></span>
         </div>
+        <!-- Updated: Changed icon for product button -->
         <div class="nav__product__btn" id="product-btn">
             <span><i class="ri-grid-fill"></i></span>
         </div>
@@ -48,17 +53,21 @@
         </div>
       </nav>
 
+      <!-- New product category navigation panel -->
       <ul class="product__links" id="product-links">
-          <li class="link"><a href="#craft">Ties</a></li>
-          <li class="link"><a href="#craft">Bow Ties</a></li>
-          <li class="link"><a href="#craft">Tie Bars</a></li>
-          <li class="link"><a href="#craft">Cufflinks</a></li>
-          <li class="link"><a href="#craft">Pocket Squares</a></li>
+          <li class="link"><a href="products.html#all-products">All Products</a></li> <!-- LINK UPDATED -->
+          <li class="link"><a href="products.html#Ties">Ties</a></li> <!-- Example: link to a filtered view on products page -->
+          <li class="link"><a href="products.html#Bow-Ties">Bow Ties</a></li>
+          <li class="link"><a href="products.html#Tie-Bars">Tie Bars</a></li>
+          <li class="link"><a href="products.html#Cufflinks">Cufflinks</a></li>
+          <li class="link"><a href="products.html#Pocket-Squares">Pocket Squares</a></li>
       </ul>
 
       <div class="section__container header__container" id="home">
+        <!-- SWIPER CONTAINER FOR HEADER SLIDER -->
         <div class="swiper header-swiper">
             <div class="swiper-wrapper">
+                <!-- Slide 1: Main Logo Content - REFINED -->
                 <div class="swiper-slide">
                     <div class="header__content__new">
                         <img src="assets/logo.jpg" alt="Pyramid Business Logo" class="business-logo">
@@ -72,6 +81,7 @@
                     </div>
                 </div>
 
+                <!-- Slide 2: Promotional Message (Example) -->
                 <div class="swiper-slide">
                     <div class="header__content__new">
                         <h1 class="header-slide-title">Crafting Elegance Since 1995</h1>
@@ -80,6 +90,7 @@
                     </div>
                 </div>
 
+                <!-- Slide 3: Call to Action (Example) -->
                 <div class="swiper-slide">
                     <div class="header__content__new">
                         <h1 class="header-slide-title">Unleash Your Style</h1>
@@ -89,10 +100,12 @@
                 </div>
 
             </div>
+            <!-- Add Pagination if desired -->
             <div class="swiper-pagination header-pagination"></div>
 
         </div>
-        </div>
+        <!-- END SWIPER CONTAINER -->
+      </div>
     </header>
 
     <section class="section__container choose__container" id="choose">
@@ -127,11 +140,7 @@
           </div>
           <div class="choose__card">
             <span><i class="ri-loop-right-line"></i></span>
-            <h4>Hassle Free Returns</h4>
-            <p>
-              We believe in the perfect match, and if it doesn't quite fit, we
-              make returning items a breeze
-            </p>
+            <h4>Hassle Free Returns</p>
           </div>
         </div>
       </div>
@@ -296,6 +305,7 @@
       </div>
     </footer>
 
+    <!-- Swiper JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pyramid Tie Collection - Products</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your existing CSS -->
+    <!-- Google Fonts for consistency -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="/ffavicon\avicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon\favicon.svg" />
+    <link rel="shortcut icon" href="favicon\favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon\apple-touch-icon.png" />
+    <link rel="manifest" href="favicon\site.webmanifest" />
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <div class="nav__logo">
+                <a href="index.html" class="logo-link"> <!-- Link back to home -->
+                    <span class="logo-pyramid">Pyramid</span> 
+                    <span class="logo-collection">Tie Collection</span>
+                </a>
+            </div>
+            <ul class="nav__links" id="nav-links">
+                <li class="link"><a href="index.html#home">Home</a></li>
+                <li class="link"><a href="index.html#choose">About</a></li>
+                <li class="link"><a href="products.html">Products</a></li> <!-- Active link for this page -->
+                <li class="link"><a href="index.html#modern">Contact</a></li>
+            </ul>
+            <div class="nav__menu__btn" id="menu-btn">
+                <span><i class="ri-menu-line"></i></span>
+            </div>
+            <div class="nav__product__btn" id="product-btn">
+                <span><i class="ri-grid-fill"></i></span>
+            </div>
+            <div class="nav__actions">
+                <span><a href="https://www.facebook.com/share/1BZMhnioeu/" target="_blank"><i class="ri-facebook-fill"></i></a></span>
+                <span><a href="https://www.instagram.com/p/DIt2YG0zwSl/" target="_blank"><i class="ri-instagram-fill"></i></a></span>
+            </div>
+        </nav>
+
+        <!-- Product category navigation panel (can be simplified if not needed on product page) -->
+        <ul class="product__links" id="product-links">
+            <li class="link"><a href="#all-products">All Products</a></li> <!-- Link to the top of product categories -->
+            <li class="link"><a href="#Ties">Ties</a></li>
+            <li class="link"><a href="#Bow-Ties">Bow Ties</a></li>
+            <li class="link"><a href="#Tie-Bars">Tie Bars</a></li>
+            <li class="link"><a href="#Cufflinks">Cufflinks</a></li>
+            <li class="link"><a href="#Pocket-Squares">Pocket Squares</a></li>
+        </ul>
+
+        <!-- Simple header for the products page -->
+        <div class="section__container header__container header__products-page">
+            <div class="header__content__new">
+                <h1 class="header-slide-title">Our Complete Collection</h1>
+                <p class="header-slide-text">Explore the full range of Pyramid Tie Collection's exquisite accessories, meticulously categorized for your browsing pleasure.</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section__container products__page" id="all-products">
+            <!-- This is the main container that will hold all categorized products -->
+            <div id="products-categories-container">
+                <!-- Category sections and product cards will be dynamically inserted here by products.js -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="section__container footer__container">
+            <div class="footer__content">
+                <h4>SUBSCRIBE TO GET THE LATEST NEWS ABOUT US</h4>
+                <p>
+                    We recommend you to subscribe to our newspaper. Enter your email to
+                    get our daily updates about us
+                </p>
+            </div>
+            <div class="footer__form">
+                <form action="/">
+                    <input type="text" placeholder="Enter your email" />
+                    <button>Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="section__container footer__bar">
+            <div class="footer__logo">
+                <h4><a href="#">Pyramid</a></h4>
+                <p>Copyright © 2025 Mahadi. All rights reserved.</p>
+            </div>
+            <ul class="footer__nav">
+                <li class="footer__link"><a href="#">About</a></li>
+                <li class="footer__link"><a href="#">Partnership</a></li>
+                <li class="footer__link"><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="main.js"></script> <!-- Keep main.js for nav functionality -->
+    <script src="products.js"></script> <!-- NEW: Link to your products.js -->
+</body>
+</html>
