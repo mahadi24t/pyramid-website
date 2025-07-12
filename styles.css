@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 
 :root {
   --primary-color: #2f2f2f;
@@ -7,6 +8,7 @@
   --white: #ffffff;
   --max-width: 1200px;
   --header-font: "Lora", serif;
+  --accent-color: #a87947; /* A warm, classic tone - adjust as desired */
 }
 
 * {
@@ -41,6 +43,7 @@
   border-radius: 5rem;
   cursor: pointer;
   transition: 0.3s;
+  border: none; /* Ensure no default button border */
 }
 
 .btn:hover {
@@ -68,10 +71,10 @@ body {
 header {
   background-image: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.8),
-      rgba(0, 0, 0, 0.2)
+      rgba(0, 0, 0, 0.7), /* Slightly less opaque */
+      rgba(0, 0, 0, 0.1) /* More transparent */
     ),
-    url("assets/header.jpeg");
+    url("assets/header.jpeg"); /* Ensure this path is correct for your header background image */
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -90,11 +93,29 @@ nav {
   flex: 1;
 }
 
-.nav__logo a {
-  font-size: 1.5rem;
-  font-weight: 600;
-  font-family: var(--header-font);
-  color: var(--white);
+/* Updated Logo Styling */
+.nav__logo .logo-link {
+    display: flex;
+    align-items: baseline;
+    gap: 0.2rem;
+    text-decoration: none;
+    color: var(--white);
+    line-height: 1;
+}
+
+.nav__logo .logo-pyramid {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.2em;
+    font-weight: normal;
+}
+
+.nav__logo .logo-collection {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.7em;
+    font-weight: 500;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .nav__links {
@@ -128,8 +149,8 @@ nav {
 }
 
 .nav__menu__btn,
-.nav__product__btn { /* Added .nav__product__btn here */
-  display: none; /* Hide by default, show on mobile */
+.nav__product__btn {
+  display: none;
   font-size: 1.5rem;
   color: var(--white);
   cursor: pointer;
@@ -149,73 +170,157 @@ nav {
   cursor: pointer;
 }
 
+/* Updated header container styling for new content */
 .header__container {
   text-align: center;
   color: var(--white);
-}
-
-
-.header__container h1 {
-  margin-bottom: 1rem;
-  font-size: 4.5rem;
-  font-weight: 600;
-  font-family: var(--header-font);
-}
-
-.header__container p {
-  max-width: 600px;
-  margin-inline: auto;
-  margin-bottom: 4rem;
-  font-size: 1.2rem;
-}
-
-.header__container form {
-  width: 100%;
-  max-width: 350px;
-  margin-inline: auto;
-  margin-bottom: 4rem;
-  padding-block: 0.25rem;
-  padding-inline: 1.25rem 0.25rem;
   display: flex;
-  align-items: center;
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--white);
-  border-radius: 5rem;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100vh - 68px - 5rem);
+  padding: 0;
 }
 
-.header__container input {
-  width: 100%;
-  outline: none;
-  border: none;
-  font-size: 1rem;
-  color: var(--white);
-  background-color: transparent;
+/* Specific styling for the Swiper in the header */
+.header-swiper {
+    width: 100%;
+    height: 100%;
 }
 
-.header__container input::placeholder {
-  color: var(--white);
+.header-swiper .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
 }
 
-.header__container button {
-  padding: 11px 12px;
-  font-size: 1.25rem;
-  outline: none;
-  border: none;
-  color: var(--white);
-  background-color: var(--primary-color);
-  border-radius: 100%;
-  cursor: pointer;
+/* New header content wrapper (applies to content within each slide) */
+.header__content__new {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem; /* Slightly increased gap for better flow */
+    max-width: 500px; /* Increased max-width for longer taglines */
+    margin: 0 auto;
+    padding: 2.5rem 2rem; /* More generous padding */
+    background-color: rgba(0, 0, 0, 0.55); /* Slightly darker, more prominent background */
+    border-radius: 12px; /* Slightly more rounded corners */
+    backdrop-filter: blur(8px); /* Increased blur for a softer effect */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); /* Stronger, more diffused shadow */
+    border: 1px solid rgba(255, 255, 255, 0.15); /* Subtle white border for definition */
 }
 
-.header__container a {
-  display: inline-block;
-  padding: 0 12px;
-  font-size: 3rem;
-  color: var(--white);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--white);
-  border-radius: 100%;
+.business-logo {
+    max-width: 220px; /* Slightly larger logo */
+    height: auto;
+    border-radius: 8px; /* Slightly more rounded corners for the logo */
+    margin-bottom: 1.5rem; /* Increased space below the logo */
+    transition: transform 0.3s ease-out; /* Added transition for hover */
 }
+
+.business-logo:hover {
+    transform: scale(1.03); /* Subtle grow effect on hover */
+}
+
+/* New styles for the two lines */
+.logo-subtitle {
+    font-family: var(--header-font);
+    font-size: 1.45rem; /* Larger font size */
+    font-weight: 600; /* More prominent weight */
+    color: var(--white);
+    line-height: 1.4; /* Improved line height */
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.6); /* Stronger, clearer text shadow */
+    margin-bottom: 0.5rem; /* Space between subtitle and established line */
+    text-align: center;
+}
+
+.logo-established {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem; /* Larger font size */
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.95); /* Brighter for better contrast */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Clearer text shadow */
+    margin-bottom: 2rem; /* Increased space before the button */
+    text-align: center;
+}
+
+.inquire-btn {
+    padding: 1rem 3rem; /* More generous padding */
+    font-size: 1.15rem; /* Slightly larger font */
+    background-color: var(--accent-color); /* Uses the accent color */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Button shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.inquire-btn:hover {
+    background-color: darken(var(--accent-color), 10%); /* Darken on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.social-chat-options {
+    display: flex;
+    gap: 1.8rem; /* Increased space between social icons */
+    margin-top: 1.5rem; /* More space from the button */
+    transition: all 0.4s ease-in-out; /* Slower, smoother transition */
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-chat-options.show {
+    opacity: 1;
+    max-height: 100px;
+}
+
+.social-chat-options a {
+    color: var(--white);
+    font-size: 2.8rem; /* Larger icons for prominence */
+    transition: transform 0.2s ease-in-out, color 0.3s ease;
+}
+
+.social-chat-options a:hover {
+    transform: scale(1.15); /* More pronounced grow on hover */
+    color: var(--accent-color); /* Change color on hover for visual feedback */
+}
+
+/* Styling for other slide content (if you add text/buttons to other slides) */
+.header-slide-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: var(--header-font);
+    margin-bottom: 1rem;
+    color: var(--white);
+    line-height: 1.2;
+}
+
+.header-slide-text {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+    max-width: 80%;
+}
+
+/* Swiper Pagination (dots) styling */
+.header-swiper .swiper-pagination {
+    bottom: 20px;
+}
+
+.header-swiper .swiper-pagination-bullet {
+    background: var(--white);
+    opacity: 0.6;
+    margin: 0 5px;
+}
+
+.header-swiper .swiper-pagination-bullet-active {
+    background: var(--white);
+    opacity: 1;
+    transform: scale(1.2);
+}
+
 
 .choose__container {
   position: relative;
@@ -620,23 +725,23 @@ nav {
 .product__links {
   list-style: none;
   position: fixed;
-  top: 68px; /* Below the fixed header */
+  top: 68px;
   right: 0;
-  width: 250px; /* Adjust as needed */
-  height: calc(100% - 68px); /* Full height below header */
-  background-color: rgba(0, 0, 0, 0.9); /* Same as main nav */
+  width: 250px;
+  height: calc(100% - 68px);
+  background-color: rgba(0, 0, 0, 0.9);
   flex-direction: column;
   padding: 2rem;
-  transform: translateX(100%); /* Start off-screen to the right */
+  transform: translateX(100%);
   transition: transform 0.5s ease-in-out;
-  z-index: 98; /* Below main nav but above content */
-  display: flex; /* Ensure it's a flex container for column layout */
-  gap: 1.5rem; /* Space out the links */
-  align-items: flex-start; /* Align links to the left */
+  z-index: 98;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
 }
 
 .product__links.open {
-  transform: translateX(0); /* Slide into view */
+  transform: translateX(0);
 }
 
 .product__links .link a {
@@ -650,7 +755,7 @@ nav {
   position: absolute;
   content: "";
   bottom: 0;
-  left: 0; /* Changed to left for product links */
+  left: 0;
   height: 2px;
   width: 0;
   background-color: var(--white);
@@ -738,15 +843,14 @@ nav {
     padding: 1rem;
     background-color: #000000;
     z-index: 99;
-    /* Updated: Use flexbox properties to distribute space */
     display: flex;
-    justify-content: space-between; /* Distribute space evenly */
+    justify-content: space-between;
     align-items: center;
-    gap: 1rem; /* Added gap between nav items */
+    gap: 1rem;
   }
 
   .nav__logo {
-    flex-grow: 1; /* Allow logo to take available space */
+    flex-grow: 1;
   }
 
   .nav__links {
@@ -775,23 +879,22 @@ nav {
   }
 
   .nav__menu__btn {
-    display: block; /* Show the main menu button */
-    order: 2; /* Adjust order to be in the middle */
+    display: block;
+    order: 2;
   }
 
-  .nav__product__btn { /* Show the new product button on mobile */
+  .nav__product__btn {
       display: block;
-      order: 3; /* Place it on the right side */
+      order: 3;
   }
 
-  /* Adjust nav actions to sit between the two buttons or reorder as desired */
   .nav__actions {
-      order: 1; /* Place social actions on the left */
-      flex: 0; /* Remove flex grow */
-      gap: 0.5rem; /* Reduced gap for actions on mobile */
+      order: 1;
+      flex: 0;
+      gap: 0.5rem;
   }
   .nav__actions span {
-      font-size: 1.2rem; /* Keep social icons size consistent */
+      font-size: 1.2rem;
   }
 
 
@@ -954,59 +1057,4 @@ nav {
   font-size: 1rem;
   font-weight: bold;
   margin-top: 5px;
-}
-/* Add this to your styles.css file */
-
-.nav__logo .logo-link {
-    display: flex;
-    align-items: baseline; /* Aligns text based on baseline */
-    gap: 0.2rem; /* Small space between words */
-    text-decoration: none; /* Remove underline */
-    color: var(--white); /* Ensure color is white, or whatever your nav text color is */
-    line-height: 1; /* Helps with alignment of different sized texts */
-}
-
-.nav__logo .logo-pyramid {
-    font-family: 'Great Vibes', cursive;
-    font-size: 2.5em; /* Start a bit larger, adjust as needed */
-    font-weight: normal; /* Script fonts usually don't need bolding */
-    /* If the "P" is cutting off at the top, you might need a tiny bit of padding-top here
-       or adjust line-height of the parent .logo-link */
-}
-
-.nav__logo .logo-collection {
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.7em; /* Proportionally smaller */
-    font-weight: 500; /* Medium weight for readability */
-    white-space: nowrap; /* Keep on one line */
-    text-transform: uppercase; /* For stylistic contrast */
-    letter-spacing: 0.05em; /* Add a little spacing for readability */
-    /* You can try a subtle text-shadow here if needed for contrast, but let's test without first */
-    /* text-shadow: 1px 1px 2px rgba(0,0,0,0.5); */
-}
-
-
-/* Adjust existing .nav__logo a rule if it conflicts */
-/* Your existing .nav__logo a rule that sets font-size: 1.5rem and font-weight: 600
-   might be overriding these new rules. Ensure these new rules are declared *after*
-   any general .nav__logo a rules, or are more specific. */
-/* You might want to remove or simplify your existing .nav__logo a rule if it's
-   causing issues, and let these new specific classes handle it. */
-.nav__logo a {
-    /* Remove or comment out conflicting styles if they are overriding the new ones */
-    /* font-size: 1.5rem; */
-    /* font-weight: 600; */
-    /* font-family: var(--header-font); */
-    /* Just keep color for now, or let .logo-link handle it */
-    color: var(--white);
-}
-
-/* If the logo is still too big or small, adjust these font-size values: */
-@media (max-width: 600px) {
-    .nav__logo .logo-pyramid {
-        font-size: 2em; /* Smaller on mobile */
-    }
-    .nav__logo .logo-collection {
-        font-size: 0.6em; /* Smaller on mobile */
-    }
 }

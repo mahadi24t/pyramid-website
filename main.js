@@ -5,10 +5,18 @@ const menuBtnIcon = menuBtn.querySelector("i");
 const productBtn = document.getElementById("product-btn");
 const productLinks = document.getElementById("product-links");
 
+// New elements for header content - make sure to target the specific slide's button/options
+const inquireBtnSlide1 = document.getElementById("inquire-btn-slide1"); // Updated ID
+const socialChatOptionsSlide1 = document.getElementById("social-chat-options-slide1");
+
+
 menuBtn.addEventListener("click", (e) => {
   navLinks.classList.toggle("open");
   // Close product panel if main menu is opened
   productLinks.classList.remove("open");
+  // Close social chat options if main menu is opened
+  socialChatOptionsSlide1.classList.remove("show"); // Target specific slide's options
+
 
   const isOpen = navLinks.classList.contains("open");
   menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
@@ -19,6 +27,8 @@ productBtn.addEventListener("click", (e) => {
   // Close main menu if product panel is opened
   navLinks.classList.remove("open");
   menuBtnIcon.setAttribute("class", "ri-menu-line"); // Reset main menu icon
+  // Close social chat options if product panel is opened
+  socialChatOptionsSlide1.classList.remove("show"); // Target specific slide's options
 });
 
 navLinks.addEventListener("click", (e) => {
@@ -32,38 +42,68 @@ productLinks.addEventListener("click", (e) => {
     }
 });
 
+// Event listener for the "Inquire Now" button on Slide 1
+inquireBtnSlide1.addEventListener("click", (e) => { // Updated variable name
+    socialChatOptionsSlide1.classList.toggle("show");
+    // Close any open nav panels when message options are toggled
+    navLinks.classList.remove("open");
+    menuBtnIcon.setAttribute("class", "ri-menu-line");
+    productLinks.classList.remove("open");
+});
+
+// Optional: Close social chat options if clicked outside
+document.addEventListener("click", (e) => {
+    // Check if the click is outside the inquire button AND outside the social options
+    if (!inquireBtnSlide1.contains(e.target) && !socialChatOptionsSlide1.contains(e.target)) {
+        socialChatOptionsSlide1.classList.remove("show");
+    }
+});
+
+
 const scrollRevealOption = {
   distance: "50px",
   origin: "bottom",
   duration: 1000,
 };
 
-// header container
-ScrollReveal().reveal(".header__container h1", {
-  ...scrollRevealOption,
+// New ScrollReveal for the header Swiper (optional)
+ScrollReveal().reveal(".header-swiper", {
+    ...scrollRevealOption,
+    delay: 300,
+    interval: 0 // Apply to the whole swiper at once
 });
 
-ScrollReveal().reveal(".header__container p", {
-  ...scrollRevealOption,
-  delay: 500,
+
+// Initialize the header Swiper
+const headerSwiper = new Swiper(".header-swiper", {
+    loop: true, // Loop through slides
+    autoplay: {
+        delay: 5000, // 5 seconds delay between slides
+        disableOnInteraction: false, // Continue autoplay even when user interacts
+    },
+    pagination: {
+        el: ".header-pagination", // Use the specific pagination class
+        clickable: true, // Allow clicking on dots to navigate
+    },
+    // Optional: Navigation buttons if you decide to add them
+    // navigation: {
+    //     nextEl: ".swiper-button-next",
+    //     prevEl: ".swiper-button-prev",
+    // },
+    effect: "fade", // A smooth fade transition
+    fadeEffect: {
+        crossFade: true,
+    },
 });
 
-ScrollReveal().reveal(".header__container form", {
-  ...scrollRevealOption,
-  delay: 1000,
-});
+// Ensure the testimonial swiper is still initialized correctly if it exists elsewhere
+// const swiper = new Swiper(".swiper", { // This might conflict if also targeting .header-swiper
+//   loop: true,
+//   pagination: {
+//     el: ".swiper-pagination",
+//   },
+// });
 
-ScrollReveal().reveal(".header__container a", {
-  ...scrollRevealOption,
-  delay: 1500,
-});
-
-const swiper = new Swiper(".swiper", {
-  loop: true,
-  pagination: {
-    el: ".swiper-pagination",
-  },
-});
 
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contactForm");

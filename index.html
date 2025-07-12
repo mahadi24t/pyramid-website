@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -24,12 +24,12 @@
   <body>
     <header class="header">
       <nav>
-<div class="nav__logo">
-    <a href="#" class="logo-link">
-        <span class="logo-pyramid">Pyramid</span> 
-        <span class="logo-collection">Tie Collection</span>
-    </a>
-</div>
+        <div class="nav__logo">
+            <a href="#" class="logo-link">
+                <span class="logo-pyramid">Pyramid</span> 
+                <span class="logo-collection">Tie Collection</span>
+            </a>
+        </div>
         <ul class="nav__links" id="nav-links">
           <li class="link"><a href="#home">Home</a></li>
           <li class="link"><a href="#choose">About</a></li>
@@ -57,18 +57,42 @@
       </ul>
 
       <div class="section__container header__container" id="home">
-        <h1>Make Your Look More Refined & Modern
+        <div class="swiper header-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="header__content__new">
+                        <img src="assets/logo.jpg" alt="Pyramid Business Logo" class="business-logo">
+                        <p class="logo-subtitle">Since 1995: The Nation's Leading Name in Tie Manufacturing.</p>
+                        <p class="logo-established">Woven for Modernity, Crafted for Enduring Style.</p>
+                        <button class="btn inquire-btn" id="inquire-btn-slide1">Inquire Now</button>
+                        <div class="social-chat-options" id="social-chat-options-slide1">
+                            <a href="https://www.facebook.com/share/1BZMhnioeu/" target="_blank" aria-label="Chat on Facebook"><i class="ri-facebook-circle-fill"></i></a>
+                            <a href="https://www.instagram.com/p/DIt2YG0zwSl/" target="_blank" aria-label="Chat on Instagram"><i class="ri-instagram-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
 
-        </h1>
-        <p>
-          Turn your ensemble with our signature ties into a lot more refined and modern style with ease and speed
-        </p>
-        <form action="/">
-          <input type="text" placeholder="Search Tie" />
-          <button><i class="ri-search-line"></i></button>
-        </form>
-        <a href="#choose"><i class="ri-arrow-down-double-line"></i></a>
-      </div>
+                <div class="swiper-slide">
+                    <div class="header__content__new">
+                        <h1 class="header-slide-title">Crafting Elegance Since 1995</h1>
+                        <p class="header-slide-text">Discover our timeless collection of premium ties, tie bars, and cufflinks.</p>
+                        <a href="#craft" class="btn">Explore Our Products</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="header__content__new">
+                        <h1 class="header-slide-title">Unleash Your Style</h1>
+                        <p class="header-slide-text">Find the perfect accessory to complement your unique look.</p>
+                        <a href="#modern" class="btn">Contact Our Team</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-pagination header-pagination"></div>
+
+        </div>
+        </div>
     </header>
 
     <section class="section__container choose__container" id="choose">
@@ -120,7 +144,7 @@
       <div class="offer__grid__top">
         <img src="assets/cufflinks.jpg" alt="offer" />
         <img src="assets/bar.jpg" alt="offer" />
-        <img src="assets/logo.jpg" alt="pyramid_logo" />
+        <img src="logo.jpg" alt="pyramid_logo" />
         <div class="offer__content">
           <h2 class="section__header">Brand History</h2>
           <p class="section__subheader">
@@ -272,8 +296,8 @@
       </div>
     </footer>
 
-    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>
   </body>
 </html>
