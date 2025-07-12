@@ -48,19 +48,69 @@ const productsData = [
         category: "Bow Ties"
     },
     {
-        name: "Striped Business Tie - Burgundy",
-        imagePath: "assets/striped-tie.jpg", // Ensure you have this image
+        name: "Blue Premium - Black Jack",
+        imagePath: "assets/blueblack.png", // Ensure you have this image
         price: "৳ 1300",
         productLink: "product-details-striped.html",
         category: "Ties"
     },
-    {
-        name: "Paisley Silk Tie - Green",
-        imagePath: "assets/paisley-tie.jpg", // Ensure you have this image
-        price: "৳ 1400",
-        productLink: "product-details-paisley.html",
+        {
+        name: "Blue Premium - White Jack",
+        imagePath: "assets/bluetie1.png", // Ensure you have this image
+        price: "৳ 1300",
+        productLink: "product-details-striped.html",
         category: "Ties"
     },
+        {
+        name: "Premium Tie Set - Luxury",
+        imagePath: "assets/Tie Set.png", // Ensure you have this image
+        price: "৳ 1300",
+        productLink: "product-details-striped.html",
+        category: "Ties"
+    },
+        {
+        name: "Premium Set - All in one",
+        imagePath: "assets/2 set.png", // Ensure you have this image
+        price: "৳ 1300",
+        productLink: "product-details-striped.html",
+        category: "Ties"
+    },
+            {
+        name: "Premium Set - All in one",
+        imagePath: "assets/2 set1.png", // Ensure you have this image
+        price: "৳ 1300",
+        productLink: "product-details-striped.html",
+        category: "Ties"
+    },
+            {
+        name: "Premium Colors - Multiple Colors",
+        imagePath: "assets/manytie.png", // Ensure you have this image
+        price: "৳ 1300",
+        productLink: "product-details-striped.html",
+        category: "Ties"
+    },
+            {
+        name: "Premium Colors - Multiple Colors",
+        imagePath: "assets/manytie1.png", // Ensure you have this image
+        price: "৳ 1300",
+        productLink: "product-details-striped.html",
+        category: "Ties"
+    },
+            {
+        name: "Premium Neck Tie - Classic",
+        imagePath: "assets/neckTie.jpg", // Ensure you have this image
+        price: "৳ 1300",
+        productLink: "product-details-striped.html",
+        category: "Ties"
+    },
+            {
+        name: "Premium Set - All in one",
+        imagePath: "assets/onlyTie.png", // Ensure you have this image
+        price: "৳ 1300",
+        productLink: "product-details-striped.html",
+        category: "Ties"
+    },
+
     {
         name: "Geometric Bow Tie - Blue",
         imagePath: "assets/geometric-bow-tie.jpg", // Ensure you have this image
